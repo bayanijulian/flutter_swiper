@@ -828,7 +828,7 @@ class _TinderState extends _CustomLayoutStateBase<_TinderSwiper> {
         ? Alignment.bottomCenter
         : Alignment.centerLeft;
 
-    return new Opacity(
+    Widget main =  new Opacity(
       opacity: o,
       child: new Transform.rotate(
         angle: a / 180.0,
@@ -847,6 +847,8 @@ class _TinderState extends _CustomLayoutStateBase<_TinderSwiper> {
         ),
       ),
     );
+
+    return Transform.translate(offset: Offset(0, -54), child: main,);
   }
 }
 
